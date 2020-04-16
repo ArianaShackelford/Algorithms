@@ -7,11 +7,11 @@ def find_max_profit(prices):
     for i in range(len(prices)):
       cur_index = i
       min_price = cur_index
-      max_price = cur_index
+      max_price = cur_index + 1
       max_profit = None
       
   #find the largest value in the prices list
-      for h in range(max_price, len(prices)):
+      for h in range(max_price, len(prices)): #this somehow needs to exclude index = 0
         if prices[max_price] < prices[h]:
           max_price = h
 
